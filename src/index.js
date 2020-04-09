@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import levelFactory from './lib/levels-factory';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <MuiThemeProvider>
+    <App level={levelFactory(5 ** 2)} />
+  </MuiThemeProvider>,
   document.getElementById('root')
 );
 
